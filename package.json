@@ -1,0 +1,24 @@
+{
+  "name": "molha-api",
+  "version": "1.0.0",
+  "description": "Dépôt officiel du parti politique MOLHA. Documents, ressources et contenus liés au mouvement.",
+  "main": "molha.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/molha509/molha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/molha509/molha/issues"
+  },
+  "homepage": "https://github.com/molha509/molha#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "express": "^5.2.1"
+  }
+}
