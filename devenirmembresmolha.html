@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MOLHA - Devenir membre</title>
+    <link rel="stylesheet" href="devenirmembresmolha.css">
+</head>
+
+<body>
+
+<header>
+
+    <!-- LOGO MOLHA -->
+    <div class="logo-container">
+        <img src="LogoMOLHA.jpg" alt="Logo MOLHA" class="logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="#">A propos</a>
+        <a href="#">Programme</a>
+        <a href="#">Actualités</a>
+        <a href="#">Evénements</a>
+        <a href="devenirmembresmolha.html" class="active">Devenir membre</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="social">
+        <a href="https://youtube.com/@sen.evallierebeauplan?si=OlyIcKxEBNMcfIcq" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/share/1C7rLAribA/" target="_blank">Facebook</a>
+        <a href="https://www.facebook.com/evbeauplan2306?mibextid=ZbWKwL" target="_blank">Page FB</a>
+    </div>
+
+</header>
+
+
+
+<!-- ======================= BANNIÈRE ======================= -->
+<div class="molha-banner-wrapper">
+    <img src="SenatEvalierebandro.jpg" alt="Bannière officielle MOLHA" class="molha-banner-img">
+</div>
+
+
+
+<!-- ======================= FORMULAIRE D’ADHÉSION ======================= -->
+<section class="form-section">
+
+    <h1>Formulaire d’adhésion au MOLHA</h1>
+
+    <form id="membreForm">
+
+        <h2>Informations Personnelles</h2>
+
+        <label>Nom / Prénom :</label>
+        <input type="text" name="nomPrenom" required>
+
+        <label>Département :</label>
+        <input type="text" name="departement" required>
+
+        <label>Nom (Org. - Asso. ou Mvt) :</label>
+        <input type="text" name="organisation">
+
+        <label>Numéro de Reconnaissance :</label>
+        <input type="text" name="numReconnaissance">
+
+        <label>Date de Naissance :</label>
+        <input type="date" name="dateNaissance" required>
+
+        <label>NIF / CIN / Matricule :</label>
+        <input type="text" name="nifCinMatricule">
+
+        <label>Lieu de Naissance / Siège Social :</label>
+        <input type="text" name="lieuNaissance">
+
+        <label>Adresse Actuelle :</label>
+        <input type="text" name="adresse" required>
+
+        <label>Phones :</label>
+        <input type="text" name="phones" required>
+
+        <label>Email :</label>
+        <input type="email" name="email" required>
+
+        <label>Professions :</label>
+        <input type="text" name="professions">
+
+        <label>Formations :</label>
+        <input type="text" name="formations">
+
+
+
+        <!-- ======================= COMITÉ EXÉCUTIF ======================= -->
+        <h2>Comité Exécutif (Org, Asso ou Mvt)</h2>
+
+        <!-- Lignes 1 à 5 -->
+        <div class="exec-line">
+            <input type="text" name="exec1_nom" placeholder="Nom & Prénom">
+            <input type="text" name="exec1_nif" placeholder="NIF / CIN">
+        </div>
+
+        <div class="exec-line">
+            <input type="text" name="exec2_nom" placeholder="Nom & Prénom">
+            <input type="text" name="exec2_nif" placeholder="NIF / CIN">
+        </div>
+
+        <div class="exec-line">
+            <input type="text" name="exec3_nom" placeholder="Nom & Prénom">
+            <input type="text" name="exec3_nif" placeholder="NIF / CIN">
+        </div>
+
+        <div class="exec-line">
+            <input type="text" name="exec4_nom" placeholder="Nom & Prénom">
+            <input type="text" name="exec4_nif" placeholder="NIF / CIN">
+        </div>
+
+        <div class="exec-line">
+            <input type="text" name="exec5_nom" placeholder="Nom & Prénom">
+            <input type="text" name="exec5_nif" placeholder="NIF / CIN">
+        </div>
+
+
+
+        <!-- ======================= RÉFÉRENCES ======================= -->
+        <h2>Deux personnes de référence</h2>
+
+        <div class="ref-line">
+            <input type="text" name="ref1_nom" placeholder="Nom & Prénom">
+            <input type="text" name="ref1_phone" placeholder="Phone">
+        </div>
+
+        <div class="ref-line">
+            <input type="text" name="ref2_nom" placeholder="Nom & Prénom">
+            <input type="text" name="ref2_phone" placeholder="Phone">
+        </div>
+
+
+
+        <!-- ======================= MOTIVATION ======================= -->
+        <h2>Pourquoi vous avez choisi de vous adhérer au MOLHA ?</h2>
+        <textarea name="motivation" required></textarea>
+
+
+
+        <!-- Date du jour AUTO -->
+        <input type="hidden" name="dateJour" id="dateJour">
+
+
+
+        <button type="submit" class="submit-btn">Envoyer</button>
+
+    </form>
+
+</section>
+
+
+
+<footer>
+    <p>MOLHA - Mouvement pour la libération d'Haïti</p>
+
+    <p>Email : molha.molha2017@gmail.com / evbeauplan2306@gmail.com</p>
+
+    <p>Téléphones :  
+        +50937028223  
+        +18296731501  
+        +17864994112
+    </p>
+
+    <div class="social-footer">
+        <a href="https://youtube.com/@sen.evallierebeauplan?si=OlyIcKxEBNMcfIcq" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/share/1C7rLAribA/" target="_blank">Facebook</a>
+        <a href="https://www.facebook.com/evbeauplan2306?mibextid=ZbWKwL" target="_blank">Page FB</a>
+    </div>
+</footer>
+
+<script src="devenirmembresmolha.js"></script>
+
+</body>
+
+</html>
