@@ -49,23 +49,34 @@ img.style.transform = "scale(1)";
 
 
 
-/* SCROLL DOUX POUR LES LIENS MENU */
+/* SCROLL DOUX POUR LES LIENS MENU — VERSION CORRIGÉE */
 
 document.querySelectorAll("nav a").forEach(function(link){
 
-link.addEventListener("click", function(e){
+    const href = link.getAttribute("href");
 
-e.preventDefault();
+    // Si href la se yon ancre (#...), sèlman lè sa a nou anpeche konpòtman default
+    if (href && href.startsWith("#")) {
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
+        link.addEventListener("click", function(e){
+            e.preventDefault();
+
+            const section = document.querySelector(href);
+
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            } else {
+                // fallback smooth scroll a anwo paj la
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        });
+
+    }
+
 });
-
-});
-
-});
-
 
 
 /* PETITE ANIMATION SUR LE BOUTON HERO */
