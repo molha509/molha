@@ -2,7 +2,7 @@
   "name": "molha-api",
   "version": "1.0.0",
   "description": "Dépôt officiel du parti politique MOLHA. Documents, ressources et contenus liés au mouvement.",
-  "main": "molha.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
