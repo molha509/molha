@@ -413,3 +413,23 @@ transition:transform 0.3s ease;
 transform:scale(1.01);
 
 }
+
+
+
+
+
+
+#btnDevenirMembre.btn-devenir-membre {
+  background-color: #00a651; /* Vert dominan bouton MOLHA */
+  color: #ffffff;            /* Ekriti blan */
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+#btnDevenirMembre.btn-devenir-membre:hover {
+  background-color: #008f44; /* Vert pi fon pou hover */
+}
