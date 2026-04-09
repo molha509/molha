@@ -51,12 +51,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 
-// =====================================
-// 🔹 ROUTE /membresmolha
-// =====================================
-app.get('/membresmolha', (req, res) => {
-  res.json({ message: "Bienvenue sur la page membres Molha!" });
-});
+
 
 
 
