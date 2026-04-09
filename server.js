@@ -41,15 +41,37 @@ app.get("/", (req, res) => {
 
 
 
+
+
+
+
 // =====================================
-// 🔗 CONNEXION MONGODB (env)
+// 🔹 ROUTE /membresmolha
 // =====================================
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-.then(() => console.log("💾 MongoDB connecté avec succès"))
-.catch(err => console.error("❌ Erreur MongoDB :", err));
+app.get('/membresmolha', (req, res) => {
+  res.json({ message: "Bienvenue sur la page membres Molha!" });
+});
+
+
+
+
+
+
+
+
+
+
+
+// =====================================
+// 🔗 CONNEXION MONGODB (env) – VERSYON MODÈN
+// =====================================
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log("💾 MongoDB connecté avec succès"))
+    .catch(err => console.error("❌ Erreur MongoDB :", err));
+
+
+
+
 
 
 // =====================================
@@ -72,6 +94,7 @@ const membreSchema = new mongoose.Schema({
 
     comiteExecutif: {
         ligne1_nom: String,
+
         ligne1_id: String,
 
         ligne2_nom: String,
