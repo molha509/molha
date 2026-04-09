@@ -48,75 +48,75 @@
 
     <h1>Formulaire d’adhésion au MOLHA</h1>
 
-    <form id="membreForm">
+    <!-- KONEKSYON FÒM NAN AK FONKSYON JS LA -->
+    <form id="membreForm" onsubmit="envoyerFormulaire(event)">
 
         <h2>Informations Personnelles</h2>
 
         <label>Nom / Prénom :</label>
-        <input type="text" name="nomPrenom" required>
+        <input type="text" id="nomprenom" name="nomPrenom" required>
 
         <label>Département :</label>
-        <input type="text" name="departement" required>
+        <input type="text" id="departement" name="departement" required>
 
         <label>Nom (Org. - Asso. ou Mvt) :</label>
-        <input type="text" name="organisation">
+        <input type="text" id="organisation" name="organisation">
 
         <label>Numéro de Reconnaissance :</label>
-        <input type="text" name="numReconnaissance">
+        <input type="text" id="reconnaissance" name="numReconnaissance">
 
         <label>Date de Naissance :</label>
-        <input type="date" name="dateNaissance" required>
+        <input type="date" id="datenaissance" name="dateNaissance" required>
 
         <label>NIF / CIN / Matricule :</label>
-        <input type="text" name="nifCinMatricule">
+        <input type="text" id="identite" name="nifCinMatricule">
 
         <label>Lieu de Naissance / Siège Social :</label>
-        <input type="text" name="lieuNaissance">
+        <input type="text" id="lieunaissance" name="lieuNaissance">
 
         <label>Adresse Actuelle :</label>
-        <input type="text" name="adresse" required>
+        <input type="text" id="adresse" name="adresse" required>
 
         <label>Phones :</label>
-        <input type="text" name="phones" required>
+        <input type="text" id="phones" name="phones" required>
 
         <label>Email :</label>
-        <input type="email" name="email" required>
+        <input type="email" id="email" name="email" required>
 
         <label>Professions :</label>
-        <input type="text" name="professions">
+        <input type="text" id="profession" name="professions">
 
         <label>Formations :</label>
-        <input type="text" name="formations">
+        <input type="text" id="formations" name="formations">
 
 
 
         <!-- ======================= COMITÉ EXÉCUTIF ======================= -->
         <h2>Comité Exécutif (Org, Asso ou Mvt)</h2>
 
-        <!-- Lignes 1 à 5 -->
         <div class="exec-line">
-            <input type="text" name="exec1_nom" placeholder="Nom & Prénom">
-            <input type="text" name="exec1_nif" placeholder="NIF / CIN">
+            <input type="text" id="exec1_nom" name="exec1_nom" placeholder="Nom & Prénom">
+            <input type="text" id="exec1_id" name="exec1_nif" placeholder="NIF / CIN">
         </div>
 
         <div class="exec-line">
-            <input type="text" name="exec2_nom" placeholder="Nom & Prénom">
-            <input type="text" name="exec2_nif" placeholder="NIF / CIN">
+            <input type="text" id="exec2_nom" name="exec2_nom" placeholder="Nom & Prénom">
+            <input type="text" id="exec2_id" name="exec2_nif" placeholder="NIF / CIN">
         </div>
 
         <div class="exec-line">
-            <input type="text" name="exec3_nom" placeholder="Nom & Prénom">
-            <input type="text" name="exec3_nif" placeholder="NIF / CIN">
+            <input type="text" id="exec3_nom" name="exec3_nom" placeholder="Nom & Prénom">
+            <input type="text" id="exec3_id" name="exec3_nif" placeholder="NIF / CIN">
         </div>
 
         <div class="exec-line">
-            <input type="text" name="exec4_nom" placeholder="Nom & Prénom">
-            <input type="text" name="exec4_nif" placeholder="NIF / CIN">
+            <input type="text" id="exec4_nom" name="exec4_nom" placeholder="Nom & Prénom">
+            <input type="text" id="exec4_id" name="exec4_nif" placeholder="NIF / CIN">
         </div>
 
         <div class="exec-line">
-            <input type="text" name="exec5_nom" placeholder="Nom & Prénom">
-            <input type="text" name="exec5_nif" placeholder="NIF / CIN">
+            <input type="text" id="exec5_nom" name="exec5_nom" placeholder="Nom & Prénom">
+            <input type="text" id="exec5_id" name="exec5_nif" placeholder="NIF / CIN">
         </div>
 
 
@@ -125,27 +125,25 @@
         <h2>Deux personnes de référence</h2>
 
         <div class="ref-line">
-            <input type="text" name="ref1_nom" placeholder="Nom & Prénom">
-            <input type="text" name="ref1_phone" placeholder="Phone">
+            <input type="text" id="ref1_nom" name="ref1_nom" placeholder="Nom & Prénom">
+            <input type="text" id="ref1_phone" name="ref1_phone" placeholder="Phone">
         </div>
 
         <div class="ref-line">
-            <input type="text" name="ref2_nom" placeholder="Nom & Prénom">
-            <input type="text" name="ref2_phone" placeholder="Phone">
+            <input type="text" id="ref2_nom" name="ref2_nom" placeholder="Nom & Prénom">
+            <input type="text" id="ref2_phone" name="ref2_phone" placeholder="Phone">
         </div>
 
 
 
         <!-- ======================= MOTIVATION ======================= -->
         <h2>Pourquoi vous avez choisi de vous adhérer au MOLHA ?</h2>
-        <textarea name="motivation" required></textarea>
+        <textarea id="motivation" name="motivation" required></textarea>
 
 
 
         <!-- Date du jour AUTO -->
         <input type="hidden" name="dateJour" id="dateJour">
-
-
 
         <button type="submit" class="submit-btn">Envoyer</button>
 
