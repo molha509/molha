@@ -38,6 +38,12 @@ app.get("/", (req, res) => {
 
 
 
+// =====================================
+// 🔗 CONNEXION MONGODB (env) – VERSYON MODÈN
+// =====================================
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log("💾 MongoDB connecté avec succès"))
+    .catch(err => console.error("❌ Erreur MongoDB :", err));
 
 
 
@@ -62,12 +68,6 @@ app.get('/membresmolha', (req, res) => {
 
 
 
-// =====================================
-// 🔗 CONNEXION MONGODB (env) – VERSYON MODÈN
-// =====================================
-mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log("💾 MongoDB connecté avec succès"))
-    .catch(err => console.error("❌ Erreur MongoDB :", err));
 
 
 
