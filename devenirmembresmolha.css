@@ -1,11 +1,11 @@
+*/ color: #ffffff; /* Ekriti blan */ }
+
 /* ================================ GLOBAL ZOOM ===================================*/
-body {
-  zoom: 200%;
-}
+body { zoom: 200%; }
 
 /* ================================ HEADER ===================================*/
 header {
-  background: #000;
+  background: #000; /* Nwa */
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -24,7 +24,7 @@ nav a {
 }
 
 nav a:hover, nav .active {
-  color: #00ff47;
+  color: #00ff47; /* Vert MOLHA */
 }
 
 .social a {
@@ -49,18 +49,17 @@ nav a:hover, nav .active {
 .form-section {
   max-width: 850px;
   margin: 40px auto;
-  background: #300;
+  background: #fff200; /* JAUNE */
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 12px #000;
 }
 
-.form-section h1, 
-.form-section h2 {
+.form-section h1, .form-section h2 {
   text-align: center;
   color: #0b1f5c; /* BLE FWONSE */
   margin-bottom: 20px;
-  border-bottom: 2px solid #00ff47;
+  border-bottom: 2px solid #00ff47; /* Vert MOLHA */
   padding-bottom: 8px;
 }
 
@@ -92,15 +91,13 @@ textarea {
 }
 
 /* LINES EXEC & REF */
-.exec-line, 
-.ref-line {
+.exec-line, .ref-line {
   display: flex;
   gap: 15px;
   margin-top: 12px;
 }
 
-.exec-line input, 
-.ref-line input {
+.exec-line input, .ref-line input {
   flex: 1;
 }
 
@@ -109,7 +106,7 @@ textarea {
   margin-top: 25px;
   width: 100%;
   padding: 15px;
-  background: #00cc3a;
+  background: #00cc3a; /* Vert MOLHA */
   color: #000;
   font-size: 18px;
   font-weight: bold;
