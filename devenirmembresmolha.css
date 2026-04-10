@@ -54,10 +54,7 @@ nav .active {
 .form-section {
     max-width: 850px;
     margin: 40px auto;
-
-    /* 🔥 SEL CHANJMAN KOULÈ (BLE + WOUJ PAL DOUX) */
-    background: linear-gradient(135deg, #f5f7ff, #ffe5e5);
-
+    background: linear-gradient(135deg, #f5f7ff, #ffe5e5); /* BLE + WOUJ PAL */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 12px #000;
@@ -87,8 +84,11 @@ textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #555;
-    background: #111;
-    color: white;
+
+    /* 🔥 AJISTEMAN OU MANDE */
+    background: #ffffff; /* BLAN */
+    color: #0b1f5c; /* BLE FONSE */
+
     border-radius: 6px;
     margin-top: 5px;
     font-size: 15px;
@@ -146,10 +146,10 @@ footer {
 }
 
 /* =========================================
-   🔥 AJOUT SELMAN: ZOOM MOBILE (PA MANYEN SIZE)
+   🔥 ZOOM ANDROID SELMAN
 ========================================= */
 @media (max-width: 768px) {
     body {
-        zoom: 1.15; /* Agrandi paj la san chanje font-size */
+        zoom: 1.5; /* 150% jan ou mande a */
     }
 }
