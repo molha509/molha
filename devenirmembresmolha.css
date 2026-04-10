@@ -1,79 +1,75 @@
-/* ================================ GLOBAL ===================================*/
+/* ================================ GLOBAL ZOOM ===================================*/
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: #8b0000; /* Rouge fonse dominan */
-    color: #ffffff; /* Ekriti blan */
+  zoom: 200%;
 }
 
 /* ================================ HEADER ===================================*/
 header {
-    background: #000; /* Nwa */
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: #000;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo-container .logo {
-    width: 120px;
+  width: 120px;
 }
 
 nav a {
-    margin: 0 12px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  margin: 0 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-nav a:hover,
-nav .active {
-    color: #00ff47; /* Vert MOLHA */
+nav a:hover, nav .active {
+  color: #00ff47;
 }
 
 .social a {
-    margin-left: 12px;
-    color: #00ff47;
-    font-weight: bold;
-    text-decoration: none;
+  margin-left: 12px;
+  color: #00ff47;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* ================================ BANNIÈRE ===================================*/
 .molha-banner-wrapper {
-    width: 100%;
+  width: 100%;
 }
 
 .molha-banner-img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ================================ FORM SECTION ===================================*/
 .form-section {
-    max-width: 850px;
-    margin: 40px auto;
-    background: linear-gradient(135deg, #f5f7ff, #ffe5e5); /* BLE + WOUJ PAL */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 12px #000;
+  max-width: 850px;
+  margin: 40px auto;
+  background: #300;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #000;
 }
 
-.form-section h1,
+.form-section h1, 
 .form-section h2 {
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #00ff47; /* Vert MOLHA */
-    padding-bottom: 8px;
+  text-align: center;
+  color: #0b1f5c; /* BLE FWONSE */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00ff47;
+  padding-bottom: 8px;
 }
 
 /* Labels */
 label {
-    font-weight: bold;
-    display: block;
-    margin-top: 15px;
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  color: #0b1f5c; /* BLE FWONSE */
 }
 
 /* Inputs */
@@ -81,75 +77,63 @@ input[type="text"],
 input[type="email"],
 input[type="date"],
 textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #555;
-
-    /* 🔥 AJISTEMAN OU MANDE */
-    background: #ffffff; /* BLAN */
-    color: #0b1f5c; /* BLE FONSE */
-
-    border-radius: 6px;
-    margin-top: 5px;
-    font-size: 15px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555;
+  background: #ffffff; /* BLAN */
+  color: #0b1f5c; /* BLE FWONSE */
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 15px;
 }
 
 textarea {
-    min-height: 120px;
+  min-height: 120px;
 }
 
 /* LINES EXEC & REF */
-.exec-line,
+.exec-line, 
 .ref-line {
-    display: flex;
-    gap: 15px;
-    margin-top: 12px;
+  display: flex;
+  gap: 15px;
+  margin-top: 12px;
 }
 
-.exec-line input,
+.exec-line input, 
 .ref-line input {
-    flex: 1;
+  flex: 1;
 }
 
 /* Bouton Envoyer */
 .submit-btn {
-    margin-top: 25px;
-    width: 100%;
-    padding: 15px;
-    background: #00cc3a; /* Vert MOLHA */
-    color: #000;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+  margin-top: 25px;
+  width: 100%;
+  padding: 15px;
+  background: #00cc3a;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .submit-btn:hover {
-    background: #00ff47;
+  background: #00ff47;
 }
 
 /* ================================ FOOTER ===================================*/
 footer {
-    background: #000;
-    color: white;
-    padding: 25px;
-    margin-top: 60px;
-    text-align: center;
+  background: #000;
+  color: white;
+  padding: 25px;
+  margin-top: 60px;
+  text-align: center;
 }
 
 .social-footer a {
-    margin: 0 12px;
-    color: #00ff47;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* =========================================
-   🔥 ZOOM ANDROID SELMAN
-========================================= */
-@media (max-width: 768px) {
-    body {
-        zoom: 1.5; /* 150% jan ou mande a */
-    }
+  margin: 0 12px;
+  color: #00ff47;
+  font-weight: bold;
+  text-decoration: none;
 }
