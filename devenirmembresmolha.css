@@ -1,37 +1,75 @@
-/* ================================
-   GLOBAL (AMELIORATION LISIBILITE)
-===================================*/
+/* ================================ GLOBAL ===================================*/
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #8b0000;
-    color: #ffffff;
-    font-size: 18px; /* OGMENTE GLOBAL */
-    line-height: 1.6;
+    background: #8b0000; /* Rouge fonse dominan */
+    color: #ffffff; /* Ekriti blan */
 }
 
-/* ================================
-   FORM SECTION (NOUVO KOULÈ LISIB)
-===================================*/
+/* ================================ HEADER ===================================*/
+header {
+    background: #000; /* Nwa */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container .logo {
+    width: 120px;
+}
+
+nav a {
+    margin: 0 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav .active {
+    color: #00ff47; /* Vert MOLHA */
+}
+
+.social a {
+    margin-left: 12px;
+    color: #00ff47;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ================================ BANNIÈRE ===================================*/
+.molha-banner-wrapper {
+    width: 100%;
+}
+
+.molha-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ================================ FORM SECTION ===================================*/
 .form-section {
     max-width: 850px;
     margin: 40px auto;
-    background: #f5f7ff; /* BLE PAL DOUX */
+
+    /* 🔥 SEL CHANJMAN KOULÈ (BLE + WOUJ PAL DOUX) */
+    background: linear-gradient(135deg, #f5f7ff, #ffe5e5);
+
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    box-shadow: 0 0 12px #000;
 }
 
-/* Titles */
 .form-section h1,
 .form-section h2 {
     text-align: center;
-    color: #111; /* nwa pou bon kontras */
+    color: #ffffff;
     margin-bottom: 20px;
-    border-bottom: 2px solid #00cc3a;
+    border-bottom: 2px solid #00ff47; /* Vert MOLHA */
     padding-bottom: 8px;
-    font-size: 22px;
 }
 
 /* Labels */
@@ -39,8 +77,6 @@ label {
     font-weight: bold;
     display: block;
     margin-top: 15px;
-    color: #222; /* nwa */
-    font-size: 16px;
 }
 
 /* Inputs */
@@ -49,24 +85,17 @@ input[type="email"],
 input[type="date"],
 textarea {
     width: 100%;
-    padding: 14px;
-    border: 1px solid #ccc;
-    background: #ffffff; /* BLAN NET */
-    color: #000; /* teks nwa */
+    padding: 12px;
+    border: 1px solid #555;
+    background: #111;
+    color: white;
     border-radius: 6px;
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 15px;
 }
 
-/* Placeholder */
-input::placeholder,
-textarea::placeholder {
-    color: #888;
-}
-
-/* Textarea */
 textarea {
-    min-height: 140px;
+    min-height: 120px;
 }
 
 /* LINES EXEC & REF */
@@ -86,8 +115,8 @@ textarea {
 .submit-btn {
     margin-top: 25px;
     width: 100%;
-    padding: 16px;
-    background: #00cc3a;
+    padding: 15px;
+    background: #00cc3a; /* Vert MOLHA */
     color: #000;
     font-size: 18px;
     font-weight: bold;
@@ -100,46 +129,27 @@ textarea {
     background: #00ff47;
 }
 
-/* ================================
-   MOBILE OPTIMIZATION (ANDROID)
-===================================*/
+/* ================================ FOOTER ===================================*/
+footer {
+    background: #000;
+    color: white;
+    padding: 25px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.social-footer a {
+    margin: 0 12px;
+    color: #00ff47;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* =========================================
+   🔥 AJOUT SELMAN: ZOOM MOBILE (PA MANYEN SIZE)
+========================================= */
 @media (max-width: 768px) {
-
     body {
-        font-size: 19px;
-    }
-
-    .form-section {
-        padding: 20px;
-        margin: 20px;
-    }
-
-    .form-section h1 {
-        font-size: 24px;
-    }
-
-    .form-section h2 {
-        font-size: 20px;
-    }
-
-    label {
-        font-size: 17px;
-    }
-
-    input,
-    textarea {
-        font-size: 17px;
-        padding: 15px;
-    }
-
-    .submit-btn {
-        font-size: 19px;
-        padding: 18px;
-    }
-
-    /* STACK sou mobil pou pa kraze layout */
-    .exec-line,
-    .ref-line {
-        flex-direction: column;
+        zoom: 1.15; /* Agrandi paj la san chanje font-size */
     }
 }
