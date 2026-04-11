@@ -56,7 +56,7 @@ nav a:hover, nav .active {
 }
 
 .form-section h1, 
-.form-section h2 {
+.form-section h1 {
   text-align: center;
   color: #0b1f5c; /* BLE FWONSE */
   margin-bottom: 20px;
@@ -77,7 +77,7 @@ input[type="text"],
 input[type="email"],
 input[type="date"],
 textarea {
-  width: 100%;
+  width: 200%;
   padding: 12px;
   border: 1px solid #555;
   background: #ffffff; /* BLAN */
