@@ -435,3 +435,29 @@ transform:scale(1.01);
 #btnDevenirMembre.btn-devenir-membre:hover {
   background-color: #008f44; /* Vert pi fon pou hover */
 }
+
+
+
+
+
+
+
+
+
+/* Mete sosyal yo anba meni an */
+header {
+  flex-wrap: wrap;
+}
+
+/* Meni an pran tout liy */
+nav {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Sosyal yo desann anba epi aliyen sou yon sèl liy */
+.social {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
