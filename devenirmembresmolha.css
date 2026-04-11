@@ -20,6 +20,7 @@ nav a {
   margin: 0 12px;
   color: white;
   text-decoration: none;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -32,6 +33,7 @@ nav a:hover, nav .active {
   color: #00ff47;
   font-weight: bold;
   text-decoration: none;
+  font-size: 18px;
 }
 
 /* ================================ BANNIÈRE ===================================*/
@@ -83,7 +85,7 @@ textarea {
   color: #0b1f5c; /* BLE FWONSE */
   border-radius: 6px;
   margin-top: 5px;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 textarea {
@@ -133,4 +135,5 @@ footer {
   color: #00ff47;
   font-weight: bold;
   text-decoration: none;
+  font-size: 18px;
 }
