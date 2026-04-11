@@ -461,3 +461,28 @@ nav {
   text-align: center;
   margin-top: 5px;
 }
+
+
+
+
+
+/* Fòse logo + menu rete sou menm liy */
+header {
+  align-items: center;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+/* Kenbe menu a bò kote logo */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Sosyal yo sèlman desann anba */
+.social {
+  flex-basis: 100%;
+}
