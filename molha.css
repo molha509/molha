@@ -1,18 +1,12 @@
 /* ================================ GLOBAL ZOOM ===================================*/
 body {
   zoom: 200%;
-
-
-{
-
-font-family: "Segoe UI", Arial, sans-serif;
-margin:0;
-background:#ffffff;
-color:#222;
-line-height:1.6;
-
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin:0;
+  background:#ffffff;
+  color:#222;
+  line-height:1.6;
 }
-
 
 
 /* HEADER */
@@ -451,8 +445,10 @@ header {
 
 /* Meni an pran tout liy */
 nav {
-  width: 100%;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
 }
 
 /* Sosyal yo desann anba epi aliyen sou yon sèl liy */
