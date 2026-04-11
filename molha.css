@@ -423,12 +423,13 @@ transform:scale(1.01);
 #btnDevenirMembre.btn-devenir-membre {
   background-color: #00a651; /* Vert dominan bouton MOLHA */
   color: #ffffff;            /* Ekriti blan */
-  padding: 12px 24px;
+  padding: 6px 12px; /* 🔽 REDWI SIZE */
   border-radius: 6px;
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
   transition: 0.3s ease;
+  font-size: 13px; /* 🔽 TEXT PI TI */
 }
 
 #btnDevenirMembre.btn-devenir-membre:hover {
