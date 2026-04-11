@@ -486,3 +486,17 @@ nav {
 .social {
   flex-basis: 100%;
 }
+
+
+
+
+
+
+
+/* ORGANIZE MENI AN: 4 BOUTON PA LIY + ESPAS */
+nav {
+  display: grid;
+  grid-template-columns: repeat(4, auto); /* 4 bouton pa liy */
+  gap: 10px; /* ESPAS ANT YO */
+  justify-content: center;
+}
