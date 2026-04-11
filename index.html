@@ -1,286 +1,182 @@
-/* ================================ GLOBAL ZOOM ===================================*/
-body {
-  zoom: 200%;
-  font-family: "Segoe UI", Arial, sans-serif;
-  margin:0;
-  background:#ffffff;
-  color:#222;
-  line-height:1.6;
-}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>MOLHA - Mouvement pour la libération d'Haïti</title>
+
+<link rel="stylesheet" href="molha.css">
+
+</head>
 
 
-/* HEADER */
-
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 40px;
-  background:linear-gradient(90deg,#000000,#8B0000);
-  color:white;
-  box-shadow:0px 3px 10px rgba(0,0,0,0.3);
-  align-items: center;
-}
 
 
-/* LOGO */
-
-.logo{
-  height:60px;
-  flex-shrink: 0;
-}
 
 
-/* MENU */
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 20px;
-}
-
-nav a {
-  background-color: #00a651;
-  color: #ffffff;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.3s ease;
-  font-size: 13px;
-}
-
-nav a:hover {
-  background-color: #008f44;
-}
+<body>
 
 
-/* SOCIAL LINKS */
- .social {
-  display: flex;
-  align-items: center;
-}
+<header>
 
-.social a{
-  color:white;
-  margin:6px;
-  font-size:14px;
-  text-decoration:none;
-  transition:0.3s;
-}
+<!-- LOGO MOLHA -->
 
-.social a:hover{
-  color:#2ecc71;
-}
+<div class="logo-container">
+
+<img src="LogoMOLHA.jpg" alt="Logo MOLHA" class="logo">
+
+</div>
 
 
-/* HERO SECTION */
+<nav>
 
-.hero{
-  text-align:center;
-  padding:90px 20px;
-  background:linear-gradient(120deg,#b30000,#ff0000);
-  color:white;
-}
+<a href="#">Accueil</a>
+<a href="#">A propos</a>
+<a href="#">Programme</a>
+<a href="#">Actualités</a>
+<a href="#">Evénements</a>
+<a href="#">Devenir membre</a>
+<a href="#">Contact</a>
 
-.hero h1{
-  font-size:40px;
-  margin-bottom:15px;
-}
-
-.hero p{
-  max-width:800px;
-  margin:auto;
-  font-size:18px;
-}
-
-.hero button{
-  margin-top:25px;
-  padding:14px 35px;
-  border:none;
-  background:#2ecc71;
-  color:white;
-  font-size:16px;
-  font-weight:bold;
-  border-radius:4px;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.hero button:hover{
-  background:#27ae60;
-  transform:scale(1.05);
-}
+</nav>
 
 
-/* SECTION PHOTOS */
+<div class="social">
 
-.photos{
-  padding:60px 20px;
-  text-align:center;
-  background:#f9f9f9;
-}
+<a href="https://youtube.com/@sen.evallierebeauplan?si=OlyIcKxEBNMcfIcq" target="_blank">YouTube</a>
 
-.photos h2{
-  color:#b30000;
-  margin-bottom:30px;
-}
+<a href="https://www.facebook.com/share/1C7rLAribA/" target="_blank">Facebook</a>
 
+<a href="https://www.facebook.com/evbeauplan2306?mibextid=ZbWKwL" target="_blank">Page FB</a>
 
-/* GRID PHOTOS */
+</div>
 
-.grid-photos{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-  max-width:750px;
-  margin:auto;
-}
-
-.grid-photos img{
-  width:100%;
-  border-radius:10px;
-  border:4px solid white;
-  box-shadow:0px 5px 15px rgba(0,0,0,0.25);
-  transition:0.3s;
-}
-
-.grid-photos img:hover{
-  transform:scale(1.03);
-}
+</header>
 
 
-/* A PROPOS */
-
-.apropos{
-  padding:60px 30px;
-  background:white;
-  text-align:center;
-}
-
-.apropos h2{
-  color:#b30000;
-  margin-bottom:15px;
-}
-
-.apropos p{
-  max-width:800px;
-  margin:auto;
-  font-size:17px;
-}
 
 
-/* MISSION */
-
-.mission{
-  padding:60px 30px;
-  background:#111;
-  color:white;
-}
-
-.mission h2{
-  text-align:center;
-  color:#2ecc71;
-  margin-bottom:25px;
-}
-
-.mission ul{
-  max-width:700px;
-  margin:auto;
-  font-size:17px;
-}
-
-.mission li{
-  margin:12px 0;
-}
 
 
-/* FOOTER */
+<div class="molha-banner-wrapper">
 
-footer{
-  background:linear-gradient(90deg,#000000,#8B0000);
-  color:white;
-  text-align:center;
-  padding:40px 20px;
-  margin-top:40px;
-}
+<img src="SenatEvalierebandro.jpg" alt="Bannière officielle MOLHA" class="molha-banner-img">
 
-.social-footer a{
-  color:white;
-  margin:12px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
-}
+</div>
+  
 
-.social-footer a:hover{
-  color:#2ecc71;
-}
+  
+<section class="hero">
 
+<h1>Mouvement pour la libération d'Haïti</h1>
 
-/* RESPONSIVE DESIGN */
+<p>
 
-@media(max-width:768px){
-  header{
-    flex-direction:column;
-  }
+Vous souhaitez agir concrètement pour votre pays ?  
+Rejoignez le Mouvement pour la libération d'Haïti (MOLHA) pour défendre les valeurs de dignité, progrès et solidarité.
 
-  nav{
-    margin:10px 0;
-  }
+</p>
 
-  .grid-photos{
-    grid-template-columns:1fr;
-  }
+<button onclick="rejoindre()">Rejoindre le Mouvement</button>
 
-  .hero h1{
-    font-size:28px;
-  }
-}
+</section>
 
 
-/* ==============================
-   MOLHA BANNER (CODE ISOLE)
-   ============================== */
+<section class="photos">
 
-.molha-banner-wrapper{
-  width:100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:15px 0;
-  background:linear-gradient(90deg,#000000,#b30000);
-}
+<h2>Activités du MOLHA</h2>
 
-.molha-banner-img{
-  width:92%;
-  max-width:1250px;
-  border-radius:8px;
-  box-shadow:0px 6px 18px rgba(0,0,0,0.4);
-  transition:transform 0.3s ease;
-}
+<div class="grid-photos">
 
-.molha-banner-img:hover{
-  transform:scale(1.01);
-}
+<img src="SenatEvaliere11.jpg" alt="photo MOLHA">
+
+<img src="SenatEvaliere1.jpg" alt="photo MOLHA">
+
+<img src="SenatEvaliere5.jpg" alt="photo MOLHA">
+
+<img src="SenatEvaliere40.jpg" alt="photo MOLHA">
+
+</div>
+
+</section>
 
 
-/* BUTTON DEVENIR MEMBRE */
+<section class="apropos">
 
-#btnDevenirMembre.btn-devenir-membre {
-  background-color: #00a651;
-  color: #ffffff;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.3s ease;
-  font-size: 13px;
-}
+<h2>A propos</h2>
 
-#btnDevenirMembre.btn-devenir-membre:hover {
-  background-color: #008f44;
-}
+<p>
+
+Ensemble, bâtissons l'avenir que nous méritons.  
+Rejoignez notre mouvement pour un changement concret basé sur la justice, la solidarité et le progrès.
+
+Nous recherchons la **DIGNITÉ, LA COMPÉTENCE ET L'EXPÉRIENCE.**
+
+</p>
+
+</section>
+
+
+<section class="mission">
+
+<h2>Mission du MOLHA</h2>
+
+<ul>
+
+<li>Rétablir la souveraineté et l'Etat de droit</li>
+
+<li>Renforcer les institutions nationales</li>
+
+<li>Créer des emplois et protéger la production nationale</li>
+
+<li>Lutter contre la pauvreté</li>
+
+<li>Promouvoir la culture et l'unité nationale</li>
+
+</ul>
+
+</section>
+
+
+<footer>
+
+<p>MOLHA - Mouvement pour la libération d'Haïti</p>
+
+<p>
+
+Email :
+molha.molha2017@gmail.com /
+evbeauplan2306@gmail.com
+
+</p>
+
+<p>
+
+Téléphones :
+
++50937028223  
++18296731501  
++17864994112
+
+</p>
+
+<div class="social-footer">
+
+<a href="https://youtube.com/@sen.evallierebeauplan?si=OlyIcKxEBNMcfIcq" target="_blank">YouTube</a>
+
+<a href="https://www.facebook.com/share/1C7rLAribA/" target="_blank">Facebook</a>
+
+<a href="https://www.facebook.com/evbeauplan2306?mibextid=ZbWKwL" target="_blank">Page FB</a>
+
+</div>
+
+</footer>
+
+
+<script src="molha.js"></script>
+
+</body>
+
+</html>
