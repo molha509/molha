@@ -493,10 +493,10 @@ nav {
 
 
 
-/* ORGANIZE MENI AN: 4 BOUTON PA LIY + ESPAS */
+/* MENI RETE SOU MENM LIY AK LOGO + ESPAS ANT BOUTON */
 nav {
-  display: grid;
-  grid-template-columns: repeat(4, auto); /* 4 bouton pa liy */
-  gap: 10px; /* ESPAS ANT YO */
-  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* ESPAS ANT BOUTON YO */
+  margin-left: 20px;
 }
