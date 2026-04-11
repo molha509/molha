@@ -51,13 +51,13 @@ nav a:hover, nav .active {
 .form-section {
   max-width: 850px;
   margin: 40px auto;
-  background: #fff200; /* JAUNE */
+  background: #ff0000; /* ROUGE */
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 12px #000;
 }
 
-.form-section h1, .form-section h2 {
+.form-section h1, .form-section h1 {
   text-align: center;
   color: #0b1f5c; /* BLE FWONSE */
   margin-bottom: 20px;
