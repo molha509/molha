@@ -1,11 +1,11 @@
-*/ color: #ffffff; /* Ekriti blan */ }
-
 /* ================================ GLOBAL ZOOM ===================================*/
-body { zoom: 500%; }
+body {
+  zoom: 200%;
+}
 
 /* ================================ HEADER ===================================*/
 header {
-  background: #000; /* Nwa */
+  background: #000;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -20,12 +20,11 @@ nav a {
   margin: 0 12px;
   color: white;
   text-decoration: none;
-  font-size: 18px;
   font-weight: bold;
 }
 
 nav a:hover, nav .active {
-  color: #00ff47; /* Vert MOLHA */
+  color: #00ff47;
 }
 
 .social a {
@@ -33,7 +32,6 @@ nav a:hover, nav .active {
   color: #00ff47;
   font-weight: bold;
   text-decoration: none;
-  font-size: 18px;
 }
 
 /* ================================ BANNIÈRE ===================================*/
@@ -51,17 +49,18 @@ nav a:hover, nav .active {
 .form-section {
   max-width: 850px;
   margin: 40px auto;
-  background: #ff0000; /* ROUGE */
+  background: #300;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 12px #000;
 }
 
-.form-section h1, .form-section h1 {
+.form-section h1, 
+.form-section h2 {
   text-align: center;
   color: #0b1f5c; /* BLE FWONSE */
   margin-bottom: 20px;
-  border-bottom: 2px solid #00ff47; /* Vert MOLHA */
+  border-bottom: 2px solid #00ff47;
   padding-bottom: 8px;
 }
 
@@ -85,7 +84,7 @@ textarea {
   color: #0b1f5c; /* BLE FWONSE */
   border-radius: 6px;
   margin-top: 5px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 textarea {
@@ -93,13 +92,15 @@ textarea {
 }
 
 /* LINES EXEC & REF */
-.exec-line, .ref-line {
+.exec-line, 
+.ref-line {
   display: flex;
   gap: 15px;
   margin-top: 12px;
 }
 
-.exec-line input, .ref-line input {
+.exec-line input, 
+.ref-line input {
   flex: 1;
 }
 
@@ -108,7 +109,7 @@ textarea {
   margin-top: 25px;
   width: 100%;
   padding: 15px;
-  background: #00cc3a; /* Vert MOLHA */
+  background: #00cc3a;
   color: #000;
   font-size: 18px;
   font-weight: bold;
@@ -135,5 +136,4 @@ footer {
   color: #00ff47;
   font-weight: bold;
   text-decoration: none;
-  font-size: 18px;
 }
