@@ -1,6 +1,9 @@
-/* STYLE GLOBAL */
+/* ================================ GLOBAL ZOOM ===================================*/
+body {
+  zoom: 200%;
+}
 
-body{
+{
 
 font-family: "Segoe UI", Arial, sans-serif;
 margin:0;
