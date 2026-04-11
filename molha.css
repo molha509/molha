@@ -46,22 +46,20 @@ height:60px;
 
 /* MENU */
 
-nav a{
-
-color:white;
-margin:12px;
-text-decoration:none;
-font-weight:600;
-letter-spacing:0.5px;
-
-transition:0.3s;
-
+nav a {
+  background-color: #00a651; /* menm vert bouton Devenir membre */
+  color: #ffffff;
+  padding: 6px 12px; /* PI TI pou pa pran espas */
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s ease;
+  font-size: 13px; /* PI TI TEXTE */
 }
 
-nav a:hover{
-
-color:#2ecc71;
-
+nav a:hover {
+  background-color: #008f44;
 }
 
 
