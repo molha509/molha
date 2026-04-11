@@ -1,12 +1,14 @@
 /* ================================ GLOBAL ZOOM ===================================*/
 body {
-  zoom: 200%;
-  font-family: "Segoe UI", Arial, sans-serif;
-  margin:0;
-  background:#ffffff;
-  color:#222;
-  line-height:1.6;
+  zoom: 200%; 
+font-family: "Segoe UI", Arial, sans-serif;
+margin:0;
+background:#ffffff;
+color:#222;
+line-height:1.6;
+
 }
+
 
 
 /* HEADER */
@@ -40,20 +42,22 @@ height:60px;
 
 /* MENU */
 
-nav a {
-  background-color: #00a651; /* menm vert bouton Devenir membre */
-  color: #ffffff;
-  padding: 6px 12px; /* PI TI pou pa pran espas */
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.3s ease;
-  font-size: 13px; /* PI TI TEXTE */
+nav a{
+
+color:white;
+margin:12px;
+text-decoration:none;
+font-weight:600;
+letter-spacing:0.5px;
+
+transition:0.3s;
+
 }
 
-nav a:hover {
-  background-color: #008f44;
+nav a:hover{
+
+color:#2ecc71;
+
 }
 
 
@@ -414,85 +418,21 @@ transform:scale(1.01);
 
 
 
+  
+/* BUTTON DEVENIR MEMBRE */
+
 #btnDevenirMembre.btn-devenir-membre {
-  background-color: #00a651; /* Vert dominan bouton MOLHA */
-  color: #ffffff;            /* Ekriti blan */
-  padding: 6px 12px; /* 🔽 REDWI SIZE */
+  background-color: #00a651;
+  color: #ffffff;
+  padding: 6px 12px;
   border-radius: 6px;
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
   transition: 0.3s ease;
-  font-size: 13px; /* 🔽 TEXT PI TI */
+  font-size: 13px;
 }
 
 #btnDevenirMembre.btn-devenir-membre:hover {
-  background-color: #008f44; /* Vert pi fon pou hover */
-}
-
-
-
-
-
-
-
-
-
-/* Mete sosyal yo anba meni an */
-header {
-  flex-wrap: wrap;
-}
-
-/* Meni an pran tout liy */
-nav {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 20px;
-}
-
-/* Sosyal yo desann anba epi aliyen sou yon sèl liy */
-.social {
-  width: 100%;
-  text-align: center;
-  margin-top: 5px;
-}
-
-
-
-
-
-/* Fòse logo + menu rete sou menm liy */
-header {
-  align-items: center;
-}
-
-.logo {
-  flex-shrink: 0;
-}
-
-/* Kenbe menu a bò kote logo */
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-/* Sosyal yo sèlman desann anba */
-.social {
-  flex-basis: 100%;
-}
-
-
-
-
-
-
-
-/* MENI RETE SOU MENM LIY AK LOGO + ESPAS ANT BOUTON */
-nav {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* ESPAS ANT BOUTON YO */
-  margin-left: 20px;
+  background-color: #008f44;
 }
