@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // ================================
 async function envoyerFormulaire(event) {
     event.preventDefault();
-
+const form = event.target; // ✅ SA OU TE BLIYE A
+    
     // ===== VARIABLES PRINCIPALES =====
     const membre = {
         nomprenom: document.getElementById("nomprenom").value.trim(),
