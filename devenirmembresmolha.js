@@ -75,6 +75,7 @@ async function envoyerFormulaire(event) {
 
         if (response.ok) {
             alert("Votre inscription a été envoyée avec succès !");
+            form.reset(); // ✅ SA AP VIDE FÒM NAN
         } else {
             alert("Erreur lors de l’envoi. Veuillez réessayer.");
         }
