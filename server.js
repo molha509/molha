@@ -172,6 +172,124 @@ app.post("/membresmolha", async (req, res) => {
 
 
 
+/////////////////////////////////////////////////////
+// 🔐 ADMIN ROUTES - MOLHA MEMBERS CONTROL PANEL
+// ⚠️ SAFE BLOCK - does NOT affect existing logic
+/////////////////////////////////////////////////////
+
+// ======================
+// GET ALL MEMBRES
+// ======================
+app.get("/membresmolha", async (req, res) => {
+    try {
+        const data = await MembresMolha.find().sort({ dateCreated: -1 });
+        res.json(data);
+    } catch (error) {
+        res.status(500).json({ message: "Erreur serveur GET ALL" });
+    }
+});
+
+// ======================
+// GET ONE MEMBER BY ID
+// ======================
+app.get("/membresmolha/:id", async (req, res) => {
+    try {
+        const data = await MembresMolha.findById(req.params.id);
+        res.json(data);
+    } catch (error) {
+        res.status(500).json({ message: "Erreur GET BY ID" });
+    }
+});
+
+// ======================
+// SEARCH MULTI-CRITERES
+// ======================
+app.get("/membresmolha/search", async (req, res) => {
+    try {
+        const q = req.query.q || "";
+
+        const regex = new RegExp(q, "i");
+
+        const result = await MembresMolha.find({
+            $or: [
+                { nomprenom: regex },
+                { identite: regex },
+                { phones: regex },
+                { email: regex }
+            ]
+        });
+
+        res.json(result);
+
+    } catch (error) {
+        res.status(500).json({ message: "Erreur SEARCH" });
+    }
+});
+
+// ======================
+// UPDATE MEMBER
+// ======================
+app.put("/membresmolha/:id", async (req, res) => {
+    try {
+        const updated = await MembresMolha.findByIdAndUpdate(
+            req.params.id,
+            req.body,
+            { new: true }
+        );
+
+        res.json({
+            success: true,
+            message: "Membre modifié avec succès",
+            data: updated
+        });
+
+    } catch (error) {
+        res.status(500).json({ message: "Erreur UPDATE" });
+    }
+});
+
+// ======================
+// DELETE MEMBER
+// ======================
+app.delete("/membresmolha/:id", async (req, res) => {
+    try {
+        await MembresMolha.findByIdAndDelete(req.params.id);
+
+        res.json({
+            success: true,
+            message: "Membre supprimé avec succès"
+        });
+
+    } catch (error) {
+        res.status(500).json({ message: "Erreur DELETE" });
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
