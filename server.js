@@ -9,6 +9,7 @@ const mongoose = require("mongoose");
 const morgan = require("morgan"); // Log request yo pou debogaj
 const helmet = require("helmet"); // Sekirite HTTP headers
 const path = require("path"); // Pou jere chemen fichye
+const bcrypt = require("bcrypt");
 
 const app = express();
 
@@ -270,6 +271,34 @@ app.delete("/membresmolha/:id", async (req, res) => {
 
 
 
+
+
+
+
+
+
+
+// ======================
+// ADMIN LOGIN
+// ======================
+app.post("/admin/login", async (req, res) => {
+    try {
+        const { password } = req.body;
+
+        const hash = process.env.ADMIN_PASSWORD_HASH;
+
+        const match = await bcrypt.compare(password, hash);
+
+        if (match) {
+            res.json({ success: true });
+        } else {
+            res.json({ success: false });
+        }
+
+    } catch (error) {
+        res.status(500).json({ success: false });
+    }
+});
 
 
 
