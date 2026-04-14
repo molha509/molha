@@ -113,3 +113,51 @@ console.log("Banner MOLHA chargé avec succès.");
 }
 
 });
+
+
+
+
+
+
+
+
+
+
+const ADMIN_API = "https://api.molha.org/admin/login";
+
+// OUVRIR MODAL
+document.getElementById("btn-admin-molha").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.getElementById("adminModal").style.display = "block";
+});
+
+// FERMER
+function fermerAdminModal() {
+    document.getElementById("adminModal").style.display = "none";
+}
+
+// VERIFY PASSWORD
+async function verifierAdmin() {
+    const password = document.getElementById("adminPassword").value;
+
+    try {
+        const res = await fetch(ADMIN_API, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ password })
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+            window.location.href = "/Adminmolha.html";
+        } else {
+            alert("Mot de passe incorrect ❌");
+        }
+
+    } catch (error) {
+        alert("Erreur serveur ❌");
+    }
+}
