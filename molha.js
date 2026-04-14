@@ -128,7 +128,6 @@ const ADMIN_API = "https://api.molha.org/admin/login";
 /* ==========================
    ADMIN BUTTON FIX (SAFE)
    ========================== */
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const btnAdmin = document.getElementById("btn-admin-molha");
