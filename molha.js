@@ -125,23 +125,41 @@ console.log("Banner MOLHA chargé avec succès.");
 
 const ADMIN_API = "https://api.molha.org/admin/login";
 
-// OUVRIR MODAL
-document.getElementById("btn-admin-molha").addEventListener("click", (e) => {
-    e.preventDefault();
-    document.getElementById("adminModal").style.display = "block";
+/* ==========================
+   ADMIN BUTTON FIX (SAFE)
+   ========================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const btnAdmin = document.getElementById("btn-admin-molha");
+
+    if (btnAdmin) {
+        btnAdmin.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const modal = document.getElementById("adminModal");
+            if (modal) {
+                modal.style.display = "block";
+            }
+        });
+    }
+
 });
 
-// FERMER
 function fermerAdminModal() {
-    document.getElementById("adminModal").style.display = "none";
+    const modal = document.getElementById("adminModal");
+    if (modal) modal.style.display = "none";
 }
 
-// VERIFY PASSWORD
 async function verifierAdmin() {
-    const password = document.getElementById("adminPassword").value;
+
+    const passwordInput = document.getElementById("adminPassword");
+    if (!passwordInput) return;
+
+    const password = passwordInput.value;
 
     try {
-        const res = await fetch(ADMIN_API, {
+        const res = await fetch("https://api.molha.org/admin/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
