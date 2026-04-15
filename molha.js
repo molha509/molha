@@ -129,11 +129,26 @@ console.log("Banner MOLHA chargé avec succès.");
    ADMIN BUTTON FIX (SAFE)
    ========================== */
 document.getElementById("adminBtn").addEventListener("click", function () {
-    const password = prompt("Antre mot de passe ADMIN lan:");
+    const pass = prompt("Antre mot de passe ADMIN lan:");
 
-    if (password === "molha2026") {
-        window.location.href = "adminmolha.html";
-    } else if (password !== null) {
-        alert("Mot de passe a pa korek!");
-    }
+    if (pass === null) return;
+
+    fetch("https://api.molha.org/verify-admin", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ password: pass })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            window.location.href = "Adminmolha.html";
+        } else {
+            alert("Mot de passe pa korek!");
+        }
+    })
+    .catch(() => {
+        alert("Erè koneksyon ak API molha a.");
+    });
 });
