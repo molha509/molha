@@ -149,6 +149,6 @@ document.getElementById("adminBtn").addEventListener("click", function () {
         }
     })
     .catch(() => {
-        alert("Erè koneksyon ak API molha a.");
+        alert("Erè koneksyon ak server admin.");
     });
 });
