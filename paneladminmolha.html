@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Admin MOLHA</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a0000, #2b0000, #000000);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: rgba(0,0,0,0.85);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255,0,0,0.6);
+    text-align: center;
+    width: 320px;
+}
+
+.login-box h2 {
+    color: #ff1a1a;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background: #1a1a1a;
+    color: white;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #b30000;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff0000;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>🔐 Admin MOLHA</h2>
+
+    <!-- type=password = pwoteksyon vizyèl -->
+    <input type="password" id="password" placeholder="Antre mot de passe">
+
+    <button onclick="login()">VALIDER</button>
+</div>
+
+<script src="paneladminmolha.js"></script>
+
+</body>
+</html>
