@@ -131,22 +131,48 @@ const ADMIN_API = "https://api.molha.org/admin/login";
 document.addEventListener("DOMContentLoaded", function () {
 
     const btnAdmin = document.getElementById("btn-admin-molha");
+    const modal = document.getElementById("adminModal");
+    const input = document.getElementById("adminPassword");
 
-    if (!btnAdmin) {
-        console.error("ADMIN button not found");
-        return;
-    }
+    if (!btnAdmin || !modal || !input) return;
 
+    // 1. Ouvri modal
     btnAdmin.addEventListener("click", function (e) {
         e.preventDefault();
-
-        const modal = document.getElementById("adminModal");
-
-        if (modal) {
-            modal.style.display = "block";
-        } else {
-            console.error("Admin modal not found");
-        }
+        modal.style.display = "block";
     });
+
+    // 2. Verify password
+    window.verifierAdmin = function () {
+
+        const password = input.value;
+
+        fetch("https://api.molha.org/admin/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ password })
+        })
+        .then(res => res.json())
+        .then(data => {
+
+            if (data.success) {
+                window.location.href = "Adminmolha.html";
+            } else {
+                alert("Mot de passe incorrect !");
+            }
+
+        })
+        .catch(err => {
+            console.error(err);
+            alert("Erreur serveur");
+        });
+    };
+
+    // 3. Close modal function (si pa deja egziste)
+    window.fermerAdminModal = function () {
+        modal.style.display = "none";
+    };
 
 });
