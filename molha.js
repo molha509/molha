@@ -123,27 +123,17 @@ console.log("Banner MOLHA chargé avec succès.");
 
 
 
-const ADMIN_API = "https://api.molha.org/admin/login";
+
 
 /* ==========================
    ADMIN BUTTON FIX (SAFE)
    ========================== */
-document.addEventListener("DOMContentLoaded", function () {
+document.getElementById("adminBtn").addEventListener("click", function () {
+    const password = prompt("Antre mot de passe ADMIN lan:");
 
-    const btnAdmin = document.getElementById("btn-admin-molha");
-    const modal = document.getElementById("adminModal");
-
-    if (!btnAdmin || !modal) return;
-
-    // 🔥 ouvri modal sèlman lè klik
-    btnAdmin.onclick = function (e) {
-        e.preventDefault();
-        modal.style.display = "flex";
-    };
-
-    // 🔥 fonksyon pou fèmen
-    window.fermerAdminModal = function () {
-        modal.style.display = "none";
-    };
-
+    if (password === "molha2026") {
+        window.location.href = "adminmolha.html";
+    } else if (password !== null) {
+        alert("Mot de passe a pa korek!");
+    }
 });
