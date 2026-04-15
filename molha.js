@@ -132,45 +132,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const btnAdmin = document.getElementById("btn-admin-molha");
     const modal = document.getElementById("adminModal");
-    const input = document.getElementById("adminPassword");
 
-    if (!btnAdmin || !modal || !input) return;
+    if (!btnAdmin || !modal) return;
 
-    // 1. Ouvri modal
-    btnAdmin.addEventListener("click", function (e) {
+    // 🔥 ouvri modal sèlman lè klik
+    btnAdmin.onclick = function (e) {
         e.preventDefault();
-        modal.style.display = "block";
-    });
-
-    // 2. Verify password
-    window.verifierAdmin = function () {
-
-        const password = input.value;
-
-        fetch("https://api.molha.org/admin/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ password })
-        })
-        .then(res => res.json())
-        .then(data => {
-
-            if (data.success) {
-                window.location.href = "Adminmolha.html";
-            } else {
-                alert("Mot de passe incorrect !");
-            }
-
-        })
-        .catch(err => {
-            console.error(err);
-            alert("Erreur serveur");
-        });
+        modal.style.display = "flex";
     };
 
-    // 3. Close modal function (si pa deja egziste)
+    // 🔥 fonksyon pou fèmen
     window.fermerAdminModal = function () {
         modal.style.display = "none";
     };
