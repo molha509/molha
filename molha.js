@@ -133,7 +133,7 @@ document.getElementById("adminBtn").addEventListener("click", function () {
 
     if (pass === null) return;
 
-    fetch("https://api.molha.org/verify-admin", {
+    fetch("https://api.molha.org/admin/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
