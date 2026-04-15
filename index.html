@@ -40,7 +40,7 @@
 <a href="/devenirmembresmolha.html" id="btn-devenir-membre" class="nav-btn" onclick="rejoindre()">
   Devenir membre
 </a>
-<a href="/Adminmolha.html" id="btn-admin-molha" class="nav-btn">ADMIN</a>
+<a href="#" id="btn-admin-molha" class="nav-btn">ADMIN</a>
   
 <a href="#">Contact</a>
 
@@ -57,6 +57,18 @@
 
 </div>
 
+<!-- MODAL PASSWORD ADMIN -->
+<div id="adminModal" class="modal">
+  <div class="modal-content">
+    <h2>🔐 Accès Admin</h2>
+
+    <input type="password" id="adminPassword" placeholder="Mot de passe">
+
+    <button onclick="verifierAdmin()">Entrer</button>
+    <button onclick="fermerAdminModal()">Annuler</button>
+  </div>
+</div>
+  
 </header>
 
 
@@ -179,17 +191,7 @@ Téléphones :
 
 
 
-<!-- MODAL PASSWORD ADMIN -->
-<div id="adminModal" class="modal">
-  <div class="modal-content">
-    <h2>🔐 Accès Admin</h2>
 
-    <input type="password" id="adminPassword" placeholder="Mot de passe">
-
-    <button onclick="verifierAdmin()">Entrer</button>
-    <button onclick="fermerAdminModal()">Annuler</button>
-  </div>
-</div>
 
 </footer>
 
