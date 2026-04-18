@@ -5,6 +5,7 @@ require('dotenv').config(); // Li tout kle sekre nan .env
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors"); // Pèmèt aksè cross-origin si ou bezwen
+const fetch = require("node-fetch");
 const mongoose = require("mongoose");
 const morgan = require("morgan"); // Log request yo pou debogaj
 const helmet = require("helmet"); // Sekirite HTTP headers
