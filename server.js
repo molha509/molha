@@ -129,7 +129,7 @@ const MembresMolha = mongoose.model("membresmolha", membreSchema);
 // =====================================
 // 📨 ROUTE AJOUT MEMBRES MOLHA
 // =====================================
-app.post("/membresmolha", async (req, res) => {
+    app.post("/membresmolha", async (req, res) => {
     try {
         const nouveauMembre = new MembresMolha(req.body);
         await nouveauMembre.save();
@@ -141,6 +141,20 @@ app.post("/membresmolha", async (req, res) => {
 
         console.log("🆕 Nouveau membre enregistré :", req.body);
 
+        // 📩 EMAIL NOTIFICATION ADMIN (SAFE - BACKEND ONLY)
+        fetch(process.env.GAS_WEBHOOK_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nom: req.body.nomprenom,
+                email: req.body.email,
+                telephone: req.body.phones,
+                secret: process.env.GAS_SECRET
+            })
+        }).catch(err => console.log("Email error:", err));
+
     } catch (error) {
         console.error("❌ ERREUR AJOUT MEMBRE :", error);
 
@@ -150,6 +164,9 @@ app.post("/membresmolha", async (req, res) => {
         });
     }
 });
+
+        
+
 
 
 
