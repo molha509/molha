@@ -5,33 +5,66 @@ body {
 
 /* TOPBAR */
 .topbar {
-  background: red;
+  background: #c40000;
   color: white;
-  padding: 5px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
   font-size: 12px;
 }
 
 /* NAVBAR */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 15px 30px;
   background: white;
 }
 
-.navbar nav a {
+.logo img {
+  height: 60px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu a {
   margin: 0 10px;
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav-actions i {
+  margin-right: 10px;
+}
+
+.btn-green {
+  background: green;
+  color: white;
+  border: none;
+  margin-right: 5px;
+  padding: 8px 15px;
+}
+
+.btn-red {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+}
+
 /* HERO */
 .hero {
-  height: 500px;
-  background: url('images/hero.jpg') center/cover;
+  height: 600px;
+  background: url('images/bg.jpg') center/cover no-repeat;
 }
 
 .overlay {
@@ -39,31 +72,36 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 40px;
+  justify-content: space-between;
+  padding: 50px;
 }
 
-.hero h1 {
+.hero-left {
   color: white;
-  font-size: 40px;
+  max-width: 600px;
 }
 
-.hero p {
-  color: white;
+.hero-left h1 {
+  font-size: 45px;
+}
+
+.hero-right img {
+  height: 350px;
 }
 
 /* BUTTONS */
 .btn {
-  padding: 10px 20px;
-  border: none;
-  color: white;
+  padding: 12px 20px;
   margin-right: 10px;
+  color: white;
+  text-decoration: none;
 }
 
-.red { background: red; }
-.green { background: green; }
-.dark { background: black; }
-.white { background: white; color: black; }
-.black { background: black; }
+.red { color: red; }
+.green { color: #00ff88; }
+
+.btn.red { background: red; }
+.btn.dark { background: black; }
 
 /* CARDS */
 .cards {
@@ -75,25 +113,16 @@ body {
 
 .card {
   flex: 1;
-  padding: 25px;
+  padding: 30px;
   border-radius: 10px;
-  color: white;
+  text-align: center;
+  font-weight: bold;
 }
 
-.white {
-  background: #eee;
-  color: black;
-}
-
-/* QUICK */
-.quick {
-  padding: 40px;
-}
-
-.quick-grid {
-  display: flex;
-  gap: 20px;
-}
+.card.red { background: red; color: white; }
+.card.white { background: #eee; }
+.card.black { background: black; color: white; }
+.card.green { background: green; color: white; }
 
 /* FOOTER */
 footer {
@@ -101,4 +130,26 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+
+  .menu {
+    display: none;
+  }
+
+  .overlay {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-right img {
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
 }
