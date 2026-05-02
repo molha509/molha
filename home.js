@@ -1,53 +1,98 @@
 // ======================================================
-// MOLHA HOME PAGE SCRIPT
+// MOLHA HOME PAGE SCRIPT (STABLE VERSION)
 // ======================================================
 
-// PAGE LOAD
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("MOLHA Home Loaded");
 
+  console.log("MOLHA UI READY");
+
+  initScrollNavbar();
   initButtons();
-  initScrollEffect();
+  initMobileMenu();
+
 });
 
 
 // ======================================================
-// BUTTON INTERACTIONS
+// NAVBAR SCROLL EFFECT
 // ======================================================
+function initScrollNavbar() {
 
-function initButtons() {
+  const navbar = document.querySelector(".navbar");
 
-  const btnDecouvrir = document.querySelector(".btn.red");
-  const btnProgramme = document.querySelector(".btn.dark");
+  if (!navbar) return;
 
-  if (btnDecouvrir) {
-    btnDecouvrir.addEventListener("click", () => {
-      alert("Bienvenue sur le site officiel du MOLHA !");
-    });
-  }
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)";
+    } else {
+      navbar.style.boxShadow = "none";
+    }
+  });
 
-  if (btnProgramme) {
-    btnProgramme.addEventListener("click", () => {
-      alert("Les programmes seront bientôt disponibles.");
-    });
-  }
 }
 
 
 // ======================================================
-// SCROLL EFFECT (Navbar)
+// BUTTON ACTIONS
 // ======================================================
+function initButtons() {
 
-function initScrollEffect() {
+  const btnDecouvrir = document.querySelector(".btn.red");
+  const btnProgrammes = document.querySelector(".btn.dark");
+
+  if (btnDecouvrir) {
+    btnDecouvrir.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: document.body.scrollHeight / 2,
+        behavior: "smooth"
+      });
+    });
+  }
+
+  if (btnProgrammes) {
+    btnProgrammes.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert("Section programmes bientôt disponible.");
+    });
+  }
+
+}
+
+
+// ======================================================
+// MOBILE MENU (RESPONSIVE)
+// ======================================================
+function initMobileMenu() {
+
+  const menu = document.querySelector(".menu");
+
+  // kreye bouton hamburger dinamikman
+  const btn = document.createElement("div");
+  btn.innerHTML = "☰";
+  btn.style.fontSize = "25px";
+  btn.style.cursor = "pointer";
+
   const navbar = document.querySelector(".navbar");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      navbar.style.background = "#111";
-      navbar.style.color = "white";
+  if (!menu || !navbar) return;
+
+  navbar.insertBefore(btn, menu);
+
+  btn.addEventListener("click", () => {
+    if (menu.style.display === "flex") {
+      menu.style.display = "none";
     } else {
-      navbar.style.background = "white";
-      navbar.style.color = "black";
+      menu.style.display = "flex";
+      menu.style.flexDirection = "column";
+      menu.style.position = "absolute";
+      menu.style.top = "70px";
+      menu.style.left = "0";
+      menu.style.background = "white";
+      menu.style.width = "100%";
+      menu.style.padding = "20px";
     }
   });
+
 }
