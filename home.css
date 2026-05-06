@@ -108,7 +108,9 @@ body {
   display: flex;
   gap: 20px;
   padding: 40px;
-  margin-top: -60px;
+
+  margin-top: 0;        /* ❌ pa gen negatif ankò */
+  position: static;     /* retounen nan flux nòmal */
 }
 
 .card {
