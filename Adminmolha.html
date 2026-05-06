@@ -31,7 +31,7 @@ if (!sessionStorage.getItem("admin_ok")) {
         <input 
             type="text" 
             id="search" 
-            placeholder="🔍 Rechercher par nom, CIN/NIF, téléphone ou email..."
+            placeholder="🔍 Rechercher par nom, NIN/PASSPORT, téléphone ou email..."
         >
 
         <!-- EXPORT BUTTON -->
@@ -50,7 +50,7 @@ if (!sessionStorage.getItem("admin_ok")) {
                     <th>Nom & Prénom</th>
                     <th>Email</th>
                     <th>Téléphone</th>
-                    <th>CIN / NIF</th>
+                    <th>NIN / PASSPORT</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -80,7 +80,7 @@ if (!sessionStorage.getItem("admin_ok")) {
                 <input type="text" id="edit_nom" placeholder="Nom & Prénom">
                 <input type="text" id="edit_email" placeholder="Email">
                 <input type="text" id="edit_phone" placeholder="Téléphone">
-                <input type="text" id="edit_identite" placeholder="CIN / NIF">
+                <input type="text" id="edit_identite" placeholder="NIN / PASSPORT">
 
                 <button type="submit">💾 Enregistrer modifications</button>
             </form>
