@@ -63,30 +63,27 @@ body {
 
 /* HERO */
 .hero {
-  height: 600px;
+  min-height: 600px;
   background: url('images/bg.jpg') center/cover no-repeat;
 }
 
 .overlay {
   background: rgba(0,0,0,0.6);
-  height: 100%;
+  min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px;
-}
-
-.hero-left {
-  color: white;
-  max-width: 600px;
+  padding: 30px;
 }
 
 .hero-left h1 {
-  font-size: 45px;
+  font-size: 32px;
+  line-height: 1.2;
 }
 
 .hero-right img {
-  height: 350px;
+  height: 300px;
+  object-fit: cover;
 }
 
 /* BUTTONS */
