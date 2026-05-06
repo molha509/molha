@@ -86,6 +86,24 @@ body {
   object-fit: cover;
 }
 
+
+
+
+
+
+/* ============================
+   FIX TEXT COLOR HERO
+   ============================ */
+
+.hero-left h1 {
+  color: white;        /* retounen koulè blan */
+}
+
+.hero-left p {
+  color: white;        /* paragraf blan */
+  font-weight: bold;   /* fè li an gra */
+}
+
 /* BUTTONS */
 .btn {
   padding: 12px 20px;
