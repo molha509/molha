@@ -30,7 +30,7 @@ const form = event.target; // ✅ SA OU TE BLIYE A
         formations: document.getElementById("formations").value.trim(),
 
         
-        },
+        
 
         // ===== REFERANS (2 LIGNES) =====
         references: {
