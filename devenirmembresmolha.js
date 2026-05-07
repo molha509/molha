@@ -20,8 +20,6 @@ const form = event.target; // ✅ SA OU TE BLIYE A
     const membre = {
         nomprenom: document.getElementById("nomprenom").value.trim(),
         departement: document.getElementById("departement").value.trim(),
-        organisation: document.getElementById("organisation").value.trim(),
-        reconnaissance: document.getElementById("reconnaissance").value.trim(),
         datenaissance: document.getElementById("datenaissance").value.trim(),
         identite: document.getElementById("identite").value.trim(),
         lieunaissance: document.getElementById("lieunaissance").value.trim(),
