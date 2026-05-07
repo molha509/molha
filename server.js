@@ -88,31 +88,7 @@ const membreSchema = new mongoose.Schema({
     profession: String,
     formations: String,
 
-    comiteExecutif: {
-        ligne1_nom: String,
-
-        ligne1_id: String,
-
-        ligne2_nom: String,
-        ligne2_id: String,
-
-        ligne3_nom: String,
-        ligne3_id: String,
-
-        ligne4_nom: String,
-        ligne4_id: String,
-
-        ligne5_nom: String,
-        ligne5_id: String
-    },
-
-    references: {
-        ref1_nom: String,
-        ref1_phone: String,
-
-        ref2_nom: String,
-        ref2_phone: String
-    },
+    
 
     motivation: String,
     dateInscription: String,
