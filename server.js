@@ -77,8 +77,6 @@ const membreSchema = new mongoose.Schema({
 
     nomprenom: String,
     departement: String,
-    organisation: String,
-    reconnaissance: String,
     datenaissance: String,
     identite: String,
     lieunaissance: String,
