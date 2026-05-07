@@ -31,22 +31,7 @@ const form = event.target; // ✅ SA OU TE BLIYE A
         profession: document.getElementById("profession").value.trim(),
         formations: document.getElementById("formations").value.trim(),
 
-        // ===== COMITE EXECUTIF (5 LIGNES) =====
-        comiteExecutif: {
-            ligne1_nom: document.getElementById("exec1_nom").value.trim(),
-            ligne1_id: document.getElementById("exec1_id").value.trim(),
-
-            ligne2_nom: document.getElementById("exec2_nom").value.trim(),
-            ligne2_id: document.getElementById("exec2_id").value.trim(),
-
-            ligne3_nom: document.getElementById("exec3_nom").value.trim(),
-            ligne3_id: document.getElementById("exec3_id").value.trim(),
-
-            ligne4_nom: document.getElementById("exec4_nom").value.trim(),
-            ligne4_id: document.getElementById("exec4_id").value.trim(),
-
-            ligne5_nom: document.getElementById("exec5_nom").value.trim(),
-            ligne5_id: document.getElementById("exec5_id").value.trim()
+        
         },
 
         // ===== REFERANS (2 LIGNES) =====
