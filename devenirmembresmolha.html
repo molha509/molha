@@ -60,12 +60,22 @@
         <input type="text" id="departement" name="departement" required>
 
         <label>Date de Naissance :</label>
-        <input type="date" id="datenaissance" name="dateNaissance" required>
+
+<input 
+    type="text"
+    id="datenaissance"
+    name="dateNaissance"
+    placeholder="jj/mm/aaaa"
+    inputmode="numeric"
+    maxlength="10"
+    required
+    class="date-input"
+>
 
         <label>Passport / NIN / Matricule :</label>
         <input type="text" id="identite" name="PassportNinMatricule">
 
-        <label>Lieu de Naissance / Siège Social :</label>
+        <label>Lieu de Naissance :</label>
         <input type="text" id="lieunaissance" name="lieuNaissance">
 
         <label>Adresse Actuelle :</label>
