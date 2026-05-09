@@ -48,6 +48,29 @@ const form = event.target; // ✅ SA OU TE BLIYE A
         dateInscription: document.getElementById("dateJour").value.trim()
     };
 
+    // ===== VALIDATION CHAMPS OBLIGATOIRES =====
+if (
+    !membre.nomprenom ||
+    !membre.departement ||
+    !membre.datenaissance ||
+    !membre.identite ||
+    !membre.lieunaissance ||
+    !membre.adresse ||
+    !membre.phones ||
+    !membre.email ||
+    !membre.profession ||
+    !membre.formations ||
+    !membre.motivation
+) {
+
+    alert("Veuillez remplir tous les champs obligatoires.");
+    return;
+}
+
+
+
+
+    
     try {
         const response = await fetch("https://api.molha.org/membresmolha", {
             method: "POST",
