@@ -9,6 +9,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00cc3a">
+  
 </head>
 
 <body>
@@ -125,6 +128,14 @@
 </div>
 
 </section>
+
+
+  <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js")
+    .then(() => console.log("Service Worker enregistré"));
+}
+</script>
 
 <!-- FOOTER -->
 <footer>
