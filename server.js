@@ -105,6 +105,48 @@ const MembresMolha = mongoose.model("membresmolha", membreSchema);
 // =====================================
     app.post("/membresmolha", async (req, res) => {
     try {
+
+
+
+// ================================
+// VALIDATION CHAMPS OBLIGATOIRES
+// ================================
+const {
+    nomprenom,
+    departement,
+    datenaissance,
+    identite,
+    lieunaissance,
+    adresse,
+    phones,
+    email,
+    profession,
+    formations,
+    motivation
+} = req.body;
+
+if (
+    !nomprenom ||
+    !departement ||
+    !datenaissance ||
+    !identite ||
+    !lieunaissance ||
+    !adresse ||
+    !phones ||
+    !email ||
+    !profession ||
+    !formations ||
+    !motivation
+) {
+    return res.status(400).json({
+        success: false,
+        message: "Champs obligatoires manquants"
+    });
+}
+
+
+
+        
         const nouveauMembre = new MembresMolha(req.body);
         await nouveauMembre.save();
 
