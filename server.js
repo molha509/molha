@@ -201,6 +201,41 @@ if (
 
 
 
+app.post("/membresmolha/check-duplicate", async (req, res) => {
+    try {
+        const { email, phones, identite, nomprenom } = req.body;
+
+        const existing = await MembresMolha.findOne({
+            $or: [
+                email ? { email } : null,
+                phones ? { phones } : null,
+                identite ? { identite } : null,
+                nomprenom ? { nomprenom } : null
+            ].filter(Boolean)
+        });
+
+        if (existing) {
+            return res.json({
+                duplicate: true,
+                message: "Utilisateur déjà existant"
+            });
+        }
+
+        return res.json({
+            duplicate: false
+        });
+
+    } catch (error) {
+        console.error("❌ CHECK DUPLICATE ERROR:", error);
+        return res.status(500).json({ duplicate: false });
+    }
+});
+
+
+
+
+
+
 
 
 
