@@ -106,9 +106,7 @@ if (duplicateCheck.duplicate) {
 
         if (response.ok) {
             alert("Votre inscription a été envoyée avec succès !");
-            form.reset(); // ✅ SA AP VIDE FÒM NAN
-             
-            form.reset();
+            form.reset(); // ✅ SA AP VIDE FÒM NAN 
             unlockSubmit();
         
             
@@ -258,3 +256,4 @@ const checkDuplicate = async (membre) => {
         return { duplicate: false };
     }
 };
+
