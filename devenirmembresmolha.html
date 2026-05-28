@@ -57,7 +57,21 @@
         <input type="text" id="nomprenom" name="nomPrenom" required>
 
         <label>Département :</label>
-        <input type="text" id="departement" name="departement" required>
+
+<select id="departement" name="departement" required>
+    <option value="">Choisissez un département</option>
+
+    <option value="Ouest">Ouest</option>
+    <option value="Artibonite">Artibonite</option>
+    <option value="Centre">Centre</option>
+    <option value="Grand'Anse">Grand'Anse</option>
+    <option value="Nippes">Nippes</option>
+    <option value="Nord">Nord</option>
+    <option value="Nord-Est">Nord-Est</option>
+    <option value="Nord-Ouest">Nord-Ouest</option>
+    <option value="Sud">Sud</option>
+    <option value="Sud-Est">Sud-Est</option>
+</select>
 
         <label>Date de Naissance :</label>
 
@@ -78,8 +92,11 @@
         <label>Lieu de Naissance :</label>
         <input type="text" id="lieunaissance" name="lieuNaissance">
 
-        <label>Adresse Actuelle :</label>
-        <input type="text" id="adresse" name="adresse" required>
+        <label>Commune :</label>
+
+<select id="adresse" name="adresse" required>
+    <option value="">Choisissez une commune</option>
+</select>
 
         <label>Phones :</label>
         <input type="text" id="phones" name="phones" required>
