@@ -146,6 +146,23 @@ if (
 
 
 
+    const existing = await MembresMolha.findOne({
+    $or: [
+        { email: req.body.email },
+        { phones: req.body.phones },
+        { identite: req.body.identite },
+        { nomprenom: req.body.nomprenom }
+    ]
+});
+
+if (existing) {
+    return res.status(409).json({
+        success: false,
+        message: "Duplicate blocked"
+    });
+}
+
+
         
         const nouveauMembre = new MembresMolha(req.body);
         await nouveauMembre.save();
