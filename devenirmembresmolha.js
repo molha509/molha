@@ -1,3 +1,5 @@
+let submitLocked = false;
+
 // ================================
 // AUTO-REMPLISSAGE DATE DU JOUR
 // ================================
