@@ -1,5 +1,15 @@
 let submitLocked = false;
 
+const lockSubmit = () => {
+    submitLocked = true;
+};
+
+const unlockSubmit = () => {
+    setTimeout(() => {
+        submitLocked = false;
+    }, 2000);
+};
+
 // ================================
 // AUTO-REMPLISSAGE DATE DU JOUR
 // ================================
@@ -16,10 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // ================================
 async function envoyerFormulaire(event) {
     event.preventDefault();
-const form = event.target; // ✅ SA OU TE BLIYE A
+    const form = event.target;
 
-if (submitLocked) return;
-submitLocked = true;
+    if (submitLocked) return;
+    lockSubmit();
     
     
     // ===== VARIABLES PRINCIPALES =====
@@ -98,10 +108,8 @@ if (duplicateCheck.duplicate) {
             alert("Votre inscription a été envoyée avec succès !");
             form.reset(); // ✅ SA AP VIDE FÒM NAN
              
-            setTimeout(() => {
-            submitLocked = false;
-            }, 2000);
-            }
+            form.reset();
+            unlockSubmit();
         
             
         } else {
