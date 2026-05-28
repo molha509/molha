@@ -120,38 +120,83 @@ dateInput.addEventListener("input", function (e) {
 
 
 const communes = {
-    Ouest: ["Port-au-Prince", "Carrefour", "Delmas", "Pétion-Ville", "Kenscoff"],
-    Artibonite: ["Gonaïves", "Saint-Marc", "Verrettes", "L'Estère"],
-    Centre: ["Hinche", "Mirebalais", "Saut-d'Eau"],
-    GrandAnse: ["Jérémie", "Dame-Marie", "Anse-d'Hainault"],
-    Nippes: ["Miragoâne", "Anse-à-Veau", "Petit-Trou-de-Nippes"],
-    Nord: ["Cap-Haïtien", "Limonade", "Acul-du-Nord"],
-    NordEst: ["Fort-Liberté", "Ouanaminthe", "Trou-du-Nord"],
-    NordOuest: ["Port-de-Paix", "Saint-Louis-du-Nord", "Bombardopolis"],
-    Sud: ["Les Cayes", "Aquin", "Cavaillon"],
-    SudEst: ["Jacmel", "Bainet", "Marigot"]
+    "Ouest": [
+        "Port-au-Prince", "Carrefour", "Delmas", "Pétion-Ville", "Kenscoff",
+        "Gressier", "Cité Soleil", "Tabarre", "Cornillon", "Fermathe"
+    ],
+
+    "Artibonite": [
+        "Gonaïves", "Saint-Marc", "Verrettes", "L'Estère", "Grande-Saline",
+        "Desdunes", "Petite-Rivière de l'Artibonite", "Marchand-Dessalines",
+        "La Chapelle", "Liancourt"
+    ],
+
+    "Centre": [
+        "Hinche", "Mirebalais", "Saut-d'Eau", "Boucan-Carré",
+        "Thomonde", "Cerca-la-Source", "Cerca Carvajal"
+    ],
+
+    "Grand'Anse": [
+        "Jérémie", "Dame-Marie", "Anse-d'Hainault", "Corail",
+        "Beaumont", "Roseaux", "Chambellan", "Moron"
+    ],
+
+    "Nippes": [
+        "Miragoâne", "Anse-à-Veau", "Petit-Trou-de-Nippes",
+        "L'Asile", "Plaisance-du-Sud", "Arnaud"
+    ],
+
+    "Nord": [
+        "Cap-Haïtien", "Limonade", "Acul-du-Nord", "Plaine-du-Nord",
+        "Quartier-Morin", "Bahon", "Grande-Rivière du Nord"
+    ],
+
+    "Nord-Est": [
+        "Fort-Liberté", "Ouanaminthe", "Trou-du-Nord",
+        "Vallières", "Caracol", "Capotille", "Mont-Organisé"
+    ],
+
+    "Nord-Ouest": [
+        "Port-de-Paix", "Saint-Louis-du-Nord", "Bombardopolis",
+        "Jean-Rabel", "Môle-Saint-Nicolas", "Baie-de-Henne"
+    ],
+
+    "Sud": [
+        "Les Cayes", "Aquin", "Cavaillon", "Chardonnières",
+        "Port-à-Piment", "Les Anglais", "Tiburon", "Île-à-Vache"
+    ],
+
+    "Sud-Est": [
+        "Jacmel", "Bainet", "Marigot", "Cayes-Jacmel",
+        "La Vallée de Jacmel", "Belle-Anse", "Thiotte", "Anse-à-Pitres"
+    ]
 };
 
-// ATTACH EVENT SAFE (apre DOM ready)
 document.addEventListener("DOMContentLoaded", () => {
+
     const dep = document.getElementById("departement");
-    const communeSelect = document.getElementById("adresse");
+    const communeSelect = document.getElementById("commune_select");
+    const adresseHidden = document.getElementById("adresse");
 
-    if (dep && communeSelect) {
-        dep.addEventListener("change", function () {
+    dep.addEventListener("change", function () {
 
-            let value = this.value;
+        let list = communes[this.value] || [];
 
-            communeSelect.innerHTML = '<option value="">Choisissez une commune</option>';
+        communeSelect.innerHTML = '<option value="">Choisissez une commune</option>';
 
-            if (communes[value]) {
-                communes[value].forEach(c => {
-                    let option = document.createElement("option");
-                    option.value = c;
-                    option.textContent = c;
-                    communeSelect.appendChild(option);
-                });
-            }
+        list.forEach(c => {
+            let opt = document.createElement("option");
+            opt.value = c;
+            opt.textContent = c;
+            communeSelect.appendChild(opt);
         });
-    }
+
+        // reset hidden field
+        adresseHidden.value = "";
+    });
+
+    communeSelect.addEventListener("change", function () {
+        adresseHidden.value = this.value; // SA KI ENPÒTAN AN
+    });
+
 });
