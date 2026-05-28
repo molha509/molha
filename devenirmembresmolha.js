@@ -109,3 +109,49 @@ dateInput.addEventListener("input", function (e) {
 
     e.target.value = value;
 });
+
+
+
+
+
+
+
+
+
+
+const communes = {
+    Ouest: ["Port-au-Prince", "Carrefour", "Delmas", "Pétion-Ville", "Kenscoff"],
+    Artibonite: ["Gonaïves", "Saint-Marc", "Verrettes", "L'Estère"],
+    Centre: ["Hinche", "Mirebalais", "Saut-d'Eau"],
+    GrandAnse: ["Jérémie", "Dame-Marie", "Anse-d'Hainault"],
+    Nippes: ["Miragoâne", "Anse-à-Veau", "Petit-Trou-de-Nippes"],
+    Nord: ["Cap-Haïtien", "Limonade", "Acul-du-Nord"],
+    NordEst: ["Fort-Liberté", "Ouanaminthe", "Trou-du-Nord"],
+    NordOuest: ["Port-de-Paix", "Saint-Louis-du-Nord", "Bombardopolis"],
+    Sud: ["Les Cayes", "Aquin", "Cavaillon"],
+    SudEst: ["Jacmel", "Bainet", "Marigot"]
+};
+
+// ATTACH EVENT SAFE (apre DOM ready)
+document.addEventListener("DOMContentLoaded", () => {
+    const dep = document.getElementById("departement");
+    const communeSelect = document.getElementById("adresse");
+
+    if (dep && communeSelect) {
+        dep.addEventListener("change", function () {
+
+            let value = this.value;
+
+            communeSelect.innerHTML = '<option value="">Choisissez une commune</option>';
+
+            if (communes[value]) {
+                communes[value].forEach(c => {
+                    let option = document.createElement("option");
+                    option.value = c;
+                    option.textContent = c;
+                    communeSelect.appendChild(option);
+                });
+            }
+        });
+    }
+});
