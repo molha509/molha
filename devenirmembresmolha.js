@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
 async function envoyerFormulaire(event) {
     event.preventDefault();
 const form = event.target; // ✅ SA OU TE BLIYE A
+
+if (submitLocked) return;
+submitLocked = true;
+    
     
     // ===== VARIABLES PRINCIPALES =====
     const membre = {
@@ -93,6 +97,13 @@ if (duplicateCheck.duplicate) {
         if (response.ok) {
             alert("Votre inscription a été envoyée avec succès !");
             form.reset(); // ✅ SA AP VIDE FÒM NAN
+             
+            setTimeout(() => {
+            submitLocked = false;
+            }, 2000);
+            }
+        
+            
         } else {
             alert("Erreur lors de l’envoi. Veuillez réessayer.");
         }
