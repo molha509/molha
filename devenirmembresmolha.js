@@ -70,6 +70,14 @@ if (
 
 
 
+
+
+    const duplicateCheck = await checkDuplicate(membre) || { duplicate: false };
+
+if (duplicateCheck.duplicate) {
+    alert("Cet utilisateur existe déjà (Nom / Email / Phone / ID) !");
+    return;
+}
     
     try {
         const response = await fetch("https://api.molha.org/membresmolha", {
@@ -200,3 +208,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+
+
+
+
+
+
+
+
+
+const checkDuplicate = async (membre) => {
+    try {
+        const res = await fetch("https://api.molha.org/membresmolha/check-duplicate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                email: membre.email,
+                phones: membre.phones,
+                identite: membre.identite
+            })
+        });
+
+        return await res.json();
+    } catch (err) {
+        console.error("Erreur duplicate check:", err);
+        return { duplicate: false };
+    }
+};
