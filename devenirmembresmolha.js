@@ -72,8 +72,6 @@ if (
     !membre.identite ||
     !membre.lieunaissance ||
     !membre.adresse ||
-    !membre.phones ||
-    !membre.email ||
     !membre.profession ||
     !membre.formations ||
     !membre.motivation
