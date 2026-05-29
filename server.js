@@ -176,8 +176,6 @@ if (existing) {
             },
             body: JSON.stringify({
                 nom: req.body.nomprenom,
-                email: req.body.email,
-                telephone: req.body.phones,
                 secret: process.env.GAS_SECRET
             })
         }).catch(err => console.log("Email error:", err));
