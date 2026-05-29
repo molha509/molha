@@ -118,8 +118,6 @@ const {
     identite,
     lieunaissance,
     adresse,
-    phones,
-    email,
     profession,
     formations,
     motivation
@@ -132,8 +130,6 @@ if (
     !identite ||
     !lieunaissance ||
     !adresse ||
-    !phones ||
-    !email ||
     !profession ||
     !formations ||
     !motivation
@@ -148,8 +144,6 @@ if (
 
     const existing = await MembresMolha.findOne({
     $or: [
-        { email: req.body.email },
-        { phones: req.body.phones },
         { identite: req.body.identite },
         { nomprenom: req.body.nomprenom }
     ]
@@ -220,12 +214,10 @@ if (existing) {
 
 app.post("/membresmolha/check-duplicate", async (req, res) => {
     try {
-        const { email, phones, identite, nomprenom } = req.body;
+        const { identite, nomprenom } = req.body;
 
         const existing = await MembresMolha.findOne({
             $or: [
-                email ? { email } : null,
-                phones ? { phones } : null,
                 identite ? { identite } : null,
                 nomprenom ? { nomprenom } : null
             ].filter(Boolean)
