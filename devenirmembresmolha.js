@@ -172,18 +172,22 @@ const communes = {
     ],
 
     "Nippes": [
-        "Miragoâne", "Anse-à-Veau", "Petit-Trou-de-Nippes",
-        "L'Asile", "Plaisance-du-Sud", "Arnaud"
+    "Miragoâne", "Anse-à-Veau", "Petit-Trou-de-Nippes", "L'Asile", "Plaisance-du-Sud", "Arnaud", "Baradères", "Grand-Boucan",
+    "Paillant", "Fonds-des-Nègres"
+
     ],
 
     "Nord": [
-        "Cap-Haïtien", "Limonade", "Acul-du-Nord", "Plaine-du-Nord",
-        "Quartier-Morin", "Bahon", "Grande-Rivière du Nord"
+    "Cap-Haïtien", "Limonade", "Acul-du-Nord", "Plaine-du-Nord", "Quartier-Morin", "Bahon", "Grande-Rivière-du-Nord",
+    "Milot", "Pignon", "La Victoire", "Ranquitte", "Dondon", "Saint-Raphaël", "Plaisance", "Pilate", "Borgne",
+    "Port-Margot", "Limbé", "Bas-Limbé"
+
     ],
 
     "Nord-Est": [
-        "Fort-Liberté", "Ouanaminthe", "Trou-du-Nord",
-        "Vallières", "Caracol", "Capotille", "Mont-Organisé"
+    "Fort-Liberté", "Ouanaminthe", "Trou-du-Nord", "Vallières", "Caracol", "Capotille", "Mont-Organisé", "Ferrier",
+    "Perches", "Sainte-Suzanne", "Terrier-Rouge", "Mombin-Crochu", "Carice", "Mont-Sainte-Marie"
+
     ],
 
     "Nord-Ouest": [
@@ -192,13 +196,15 @@ const communes = {
     ],
     
     "Sud": [
-        "Les Cayes", "Aquin", "Cavaillon", "Chardonnières",
-        "Port-à-Piment", "Les Anglais", "Tiburon", "Île-à-Vache"
+    "Les Cayes", "Aquin", "Cavaillon", "Chardonnières", "Port-à-Piment", "Les Anglais", "Tiburon", "Île-à-Vache",
+    "Camp-Perrin", "Maniche", "Torbeck", "Saint-Jean-du-Sud", "Arniquet"
+
     ],
 
     "Sud-Est": [
-        "Jacmel", "Bainet", "Marigot", "Cayes-Jacmel",
-        "La Vallée de Jacmel", "Belle-Anse", "Thiotte", "Anse-à-Pitres"
+    "Jacmel", "Bainet", "Marigot", "Cayes-Jacmel", "La Vallée-de-Jacmel", "Belle-Anse", "Thiotte", "Anse-à-Pitres",
+    "Grand-Gosier", "Jacmel", "Côtes-de-Fer"
+
     ]
 };
 
