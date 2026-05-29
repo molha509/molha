@@ -141,16 +141,16 @@ if (
 }
 
 
-
-    const existing = await MembresMolha.findOne({
+const existing = await MembresMolha.findOne({
     $or: [
-        { phones: req.body.phones },
-        { email: req.body.email },
-        { identite: req.body.identite },
-        { nomprenom: req.body.nomprenom }
-    ]
+        req.body.phones ? { phones: req.body.phones } : null,
+        req.body.email ? { email: req.body.email } : null,
+        req.body.identite ? { identite: req.body.identite } : null,
+        req.body.nomprenom ? { nomprenom: req.body.nomprenom } : null
+        
+    ].filter(Boolean)
 });
-
+    
 if (existing) {
     return res.status(409).json({
         success: false,
