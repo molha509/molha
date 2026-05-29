@@ -144,6 +144,8 @@ if (
 
     const existing = await MembresMolha.findOne({
     $or: [
+        { phones: req.body.phones },
+        { email: req.body.email },
         { identite: req.body.identite },
         { nomprenom: req.body.nomprenom }
     ]
