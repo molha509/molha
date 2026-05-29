@@ -148,8 +148,9 @@ dateInput.addEventListener("input", function (e) {
 
 const communes = {
     "Ouest": [
-        "Port-au-Prince", "Carrefour", "Delmas", "Pétion-Ville", "Kenscoff",
-        "Gressier", "Cité Soleil", "Tabarre", "Cornillon", "Fermathe"
+    "Port-au-Prince", "Carrefour", "Delmas", "Pétion-Ville", "Kenscoff", "Gressier", "Cité Soleil", "Tabarre", "Cornillon",
+    "Fermathe", "Croix-des-Bouquets", "Ganthier", "Thomazeau", "Fonds-Verrettes", "Arcahaie", "Cabaret", "Anse-à-Galets",
+    "Pointe-à-Raquette", "Léogâne", "Petit-Goâve", "Grand-Goâve"
     ],
 
     "Artibonite": [
