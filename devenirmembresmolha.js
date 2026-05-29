@@ -154,19 +154,21 @@ const communes = {
     ],
 
     "Artibonite": [
-        "Gonaïves", "Saint-Marc", "Verrettes", "L'Estère", "Grande-Saline",
-        "Desdunes", "Petite-Rivière de l'Artibonite", "Marchand-Dessalines",
-        "La Chapelle", "Liancourt"
+    "Gonaïves", "Saint-Marc", "Verrettes", "L'Estère", "Grande-Saline", "Desdunes", "Petite-Rivière de l'Artibonite",
+    "Marchand-Dessalines", "La Chapelle", "Liancourt", "Dessalines", "Marmelade", "Ennery", "Gros-Morne", "Terre-Neuve",
+    "Anse-Rouge"
+        
     ],
 
     "Centre": [
-        "Hinche", "Mirebalais", "Saut-d'Eau", "Boucan-Carré",
-        "Thomonde", "Cerca-la-Source", "Cerca Carvajal"
+    "Hinche", "Mirebalais", "Saut-d'Eau", "Boucan-Carré", "Thomonde", "Cerca-la-Source", "Cerca Carvajal", "Lascahobas",
+    "Belladère", "Savanette", "Maïssade"
+        
     ],
 
     "Grand'Anse": [
-        "Jérémie", "Dame-Marie", "Anse-d'Hainault", "Corail",
-        "Beaumont", "Roseaux", "Chambellan", "Moron"
+    "Jérémie", "Dame-Marie", "Anse-d'Hainault", "Corail", "Beaumont", "Roseaux", "Chambellan", "Moron", "Pestel", "Les Irois"
+        
     ],
 
     "Nippes": [
