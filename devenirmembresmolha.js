@@ -91,7 +91,7 @@ if (
     const duplicateCheck = await checkDuplicate(membre) || { duplicate: false };
 
 if (duplicateCheck.duplicate) {
-    alert("Cet utilisateur existe déjà (Nom / Email / Phone / ID) !");
+    alert("Cet utilisateur existe déjà (Nom  / ID) !");
     return;
 }
     
@@ -185,9 +185,9 @@ const communes = {
 
     "Nord-Ouest": [
         "Port-de-Paix", "Saint-Louis-du-Nord", "Bombardopolis",
-        "Jean-Rabel", "Môle-Saint-Nicolas", "Baie-de-Henne"
+        "Jean-Rabel", "Môle-Saint-Nicolas", "Baie-de-Henne", "Bassin-Bleu", "La Pointe", "Chansolme", "La Tortue", "Anse-à-Foleur" 
     ],
-
+    
     "Sud": [
         "Les Cayes", "Aquin", "Cavaillon", "Chardonnières",
         "Port-à-Piment", "Les Anglais", "Tiburon", "Île-à-Vache"
